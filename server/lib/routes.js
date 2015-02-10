@@ -3,33 +3,16 @@
 'use strict';
 var middleware = require('./middleware'),
     index = require('./controllers/index'),
-    sounds = require('./controllers/sounds'),
-    persons = require('./controllers/persons'),
-    stream = require('./controllers/stream'),
-    UserController = require('./controllers/upload');
+    posts = require('./controllers/posts');
 
 module.exports = function(app) {
   // Server API Routes
   // -------
-  // Sounds
+  // Posts
   // -------
-  app.get('/api/sounds', sounds.query);
-  app.get('/api/sounds/:slug', sounds.show);
-  app.post('/api/sounds/:slug', sounds.create);
-  // -------
-  // Persons
-  // -------
-  app.get('/api/persons', persons.query);
-  app.get('/api/persons/:slug', persons.show);
-  app.post('/api/persons/:slug', persons.create);
-  // -------
-  // Stream
-  // -------
-  app.get('/api/stream/:filename', stream.stream);
-  // -------
-  // Upload
-  // -------
-  app.post('/api/user/uploads', multipartyMiddleware, UserController.uploadFile);
+  app.get('/api/posts', posts.query);
+  app.get('/api/posts/:slug', posts.show);
+  app.post('/api/posts/:slug', posts.create);
  
   // -------
   // Other

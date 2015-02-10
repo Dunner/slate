@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name soundApp.socket
+ * @name postApp.socket
  * @description
  * # socket
- * Factory in the soundApp.
+ * Factory in the postApp.
  */
-angular.module('soundApp')
+angular.module('postApp')
   .factory('socket', function (socketFactory) {
     return socketFactory();
   });

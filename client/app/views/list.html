@@ -1,15 +1,6 @@
 
 
-<div class="listwrap">
-    
-    <hr/>
-    <h3>List of Sounds</h3>
-    sort by: <select ng-model="query" ng-options="person.name for person in persons"></select>
-    <hr/>
-    
-    <div class="button button-soundfile" ng-repeat="sound in sounds | filter: query._id" ng-click="stream(sound.filename)">
-        {{sound.name}}
-    </div>
-    <hr/>
-    
+
+<div ng-repeat="post in posts">
+    {{post.name}}
 </div>

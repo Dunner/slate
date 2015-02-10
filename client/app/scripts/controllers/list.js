@@ -2,26 +2,16 @@
 
 /**
  * @ngdoc function
- * @name soundAppApp.controller:listCtrl
+ * @name postApp.controller:listCtrl
  * @description
  * # listCtrl
- * Controller of the soundApp
+ * Controller of the postApp
  */
-angular.module('soundApp')
-  .controller('listCtrl', function ($scope, $filter, Sounds, Persons, Stream, Audio) {
+angular.module('postApp')
+  .controller('listCtrl', function ($scope, $filter, Posts) {
     
-    Sounds.query(function(response) {
-      $scope.sounds = response;
+    Posts.query(function(response) {
+      $scope.posts = response;
     });
-    Persons.query(function(response) {
-      $scope.persons = response;
-      $scope.query = $scope.persons[0];
-    });
-    
-    $scope.stream = function(filename) {
-      //var filename = filename.replace(/\.[^/.]+$/, "")
-      
-      Audio.play('/api/stream/' + filename);
-    };
     
   });

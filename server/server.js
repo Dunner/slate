@@ -12,7 +12,6 @@
   var mongoose       = require('mongoose');
   var ejs            = require('ejs');
   var io             = require('socket.io').listen(server);
-  var multiparty     = require('connect-multiparty');
   
   var bodyParser     = require('body-parser');
   var cookieParser   = require('cookie-parser');
@@ -65,9 +64,6 @@
   app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
   app.use(methodOverride());
 
-
-  // Requires multiparty 
-  multipartyMiddleware = multiparty(),
 
   // Persist sessions with mongoStore
   app.use(session({

@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc filter
- * @name soundApp.filter:slug
+ * @name postApp.filter:slug
  * @function
  * @description
  * # slug
- * Filter in the soundApp.
+ * Filter in the postApp.
  */
-angular.module('soundApp')
+angular.module('postApp')
   .filter('slug', function () {
     return function (text) {
       return text.replace(/[^a-z0-9_ -]/gi, '').replace(/\s+/g, '-').toLowerCase();

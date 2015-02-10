@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name soundApp.scroll
+ * @name postApp.scroll
  * @description
  * # scroll
- * Service in the soundApp.
+ * Service in the postApp.
  */
-angular.module('soundApp')
+angular.module('postApp')
   .service('scroll', function scroll() {
 
     function getElementY(element) {

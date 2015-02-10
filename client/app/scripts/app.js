@@ -2,21 +2,20 @@
 
 /**
  * @ngdoc overview
- * @name soundAppApp
+ * @name postApp
  * @description
- * # soundAppApp
+ * # postApp
  *
  * Main module of the application.
  */
 angular
-  .module('soundApp', [
+  .module('postApp', [
     'ui.router',
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'angularFileUpload',
     
     'btford.socket-io'
   ])
@@ -49,16 +48,10 @@ angular
         controller: 'listCtrl'
       })
       
-      .state('person', {
-        url: '/person',
-        templateUrl: 'views/person.html',
-        controller: 'personCtrl'
-      })
-      
-      .state('sound', {
-        url: '/sound',
-        templateUrl: 'views/sound.html',
-        controller: 'soundCtrl'
+      .state('post', {
+        url: '/post',
+        templateUrl: 'views/post.html',
+        controller: 'postCtrl'
       });
       
     $urlRouterProvider.otherwise('/');
